@@ -79,8 +79,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-              <li><a class="" href="penjualan.php">Penjualan</a></li>
-              <li><a class="" href="#">Laporan penjualan</a></li>
+              <li><a class="" href="penjualan">Penjualan</a></li>
+              <li><a class="" href="laporpen">Laporan penjualan</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -90,13 +90,27 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="rutin.php">Pengeluaran Rutin</a></li>
-              <li><a class="" href="#">Pengeluaran ....</a></li>
+              <li><a class="" href="manual">Catat Pengeluaran</a></li>
+              <li><a class="" href="laporpeng">Laporan Pengeluaran</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Stok</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="stokbahan">Stok Bahan Baku</a></li>
+              <li><a class="" href="stokbarang">Stok Produk</a></li>
+             
             </ul>
           </li>
 
         </ul>
+        
         <!-- sidebar menu end-->
       </div>
     </aside>
+
 	<!--sidebar end-->

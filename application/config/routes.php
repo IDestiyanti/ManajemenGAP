@@ -57,7 +57,16 @@ $route['api/v1/karyawan']['post'] = 'Karyawan/postKaryawan';
 $route['api/v1/pemasukan']['post'] = 'Pemasukan/postPemasukan';
 $route['api/v1/penitip']['post'] = 'Penitip/postPenitip';
 
+
+
 $route['test'] = 'Items/catalog';
+$route['penjualan'] = 'penjualan';
+$route['manual'] = 'manual';
+$route['laporpen'] = 'laporpen';
+$route['bahanbaku'] = 'bahanbaku';
+$route['keranjang'] = 'keranjang';
+$route['listrik'] = 'listrik';
+$route['rutin'] = 'rutin';
 // $route['posttPengeluaran'] = 'Pengeluaran/postPengeluaran';
 // $route['karyawan'] = 'Karyawan/';
 // $route['pemasukan'] = 'Pemasukan/';

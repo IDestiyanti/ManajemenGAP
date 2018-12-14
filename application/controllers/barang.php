@@ -9,7 +9,7 @@
         private $jenis_barang;
         private $id_penitip;
    }
-		public function __constructor(){
+		public function constructor(){
 			$this->load->helper('url');
 		}
 		

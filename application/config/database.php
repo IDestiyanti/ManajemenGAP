@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'managemengap',
+	'database' => 'griya',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -94,3 +94,5 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+$db[ 'default' ][ 'dsn' ]  =  'pgsql: host = localhost; port = 5542; dbname = griya' ;
+$db [ 'default' ] [ 'dsn' ]  =  '// localhost /ManajemenGAP' ;

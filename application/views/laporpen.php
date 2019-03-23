@@ -12,18 +12,21 @@
                <div class="col-lg-1"></div>
               <div class="col-lg-2">
                  
-                <div class="form-group">
-                <label for="exampleFormControlSelect1">Dari</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-          
-                </select>
+              <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
               </div>
                </div>
                
                <div class="col-lg-2">
                   <div class="form-group">
                 <label for="exampleFormControlSelect1">Sampai</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="input-group date" id="exampleFormControlSelect1">
             
                  
                 </select>
@@ -59,7 +62,11 @@
             </center>
            
     </section></section>
-
+    <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
   <?php
 	include 'homepage/Footer.php'
   ?>	

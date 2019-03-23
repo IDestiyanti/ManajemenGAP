@@ -1,51 +1,108 @@
 <?php
-	include 'homepage/Header.php';
-
+  include 'homepage/Header.php';
+  
 ?>
-
-    <!--main content start-->
-    <section id="main-content">
+  <section id="main-content">
     <section class="wrapper">
-    <table>
-    <tr>
-    <td style="width:95%">
-    <form>
-   
-  <div class="form-group row">
-     
-    <div class="col-sm-12">
-      <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Pencarian" style="height:50px;font-size:20px">
-    </div>
-  </div>
-    </form>
-    </td>
-    <td ><button style="margin-bottom:20px" type="button" class="btn btn-primary btn-lg">Cari</button></td>
+    <center>
+    <form name="formulir" action="konek.php" method="POST" onSubmit="return validasi()">
+<p style="text-align:center;font-size:30px">MENCATAT PENGELUARAN</p><br>
+  <table>
+    <tr style="margin:12px">
+      <td style="font-size:25px;padding-top:10px">  <div class="form-group">
+                <label for="exampleFormControlSelect1">KAS :</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Kas Bahan Baku</option>
+                 
+                </select></td>
     </tr>
-    </table>
-     <!-- tabel-->
-     <center>
-          <table class="table table-bordered table-hover" style="margin:10px;width:80%;background-color:white">
-            <thead style="background-color:black">
-            <tr>
-          
-              <th style="font-size:20px" scope="col">NAMA PRODUK</th>
-              <th style="font-size:20px" scope="col">HARGA</th>
-              <th style="font-size:20px" scope="col">TAMBAH</th>
-            </tr>
-            </thead>
-            <tbody>
+          <tr>
+            <td style="font-size:25px;padding-top:10px">NAMA : </td>
+          </tr>
               <tr>
-             
-              <td style="font-size:20px">Tanggal</td>
-              <td style="font-size:20px">Kode Barang</td>
-              <td><button style="border-radius:100% 100% 100% 100%;" type="button" class="btn btn-primary btn-sm">+</button></td>
+                <td><input type="text" name="nama" required /></td>
               </tr>
-            </tbody>
-          </table>
-            </center>
-            
+          <tr>
+    <tr>
+      <td style="font-size:25px;padding-top:10px">JUMLAH : </td>
+    </tr>
+        <tr>
+          <td><input type="text" name="jumlah" required /></td>
+        </tr>
+        <tr>
+      <td style="font-size:25px;padding-top:10px">HARGA : </td>
+    </tr>
+        <tr>
+          <td><input type="text" name="harga" required /></td>
+        </tr>
+    <tr>
+      <td style="font-size:25px;padding-top:20px">KETERANGAN :</td>
+    </tr>
+        <tr>
+          <td><textarea name="keterangan"></textarea></td>
+        </tr>
+  
+<tr>
+      <td style="padding-top:30px">
+        <input type="submit" name="submit" value="kirim" />
+        <input type="reset" name="reset" value="batal" />
+      </td>
+    </tr>
+  </table>
 
-    </section>
+</form>
+<style type="text/css">
+    body{
+
+      font-family: Arial;
+
+
+    }
+      input[type=text]{
+        width: 400px;
+        margin: 8px 0px;
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid gray;
+       
+
+      }
+      textarea{
+        width: 400px;
+        height: 90px;
+        border: 2px solid gray;
+        margin-top: 10px;
+      }
+      form{
+      border:4px solid gray;
+      background-color:white;
+      width:800px;
+      margin:50px;
+      padding:50px;
+      padding-left: 90px;
+      text-align:left;
+      border-radius:30px;
+     
+      }
+      input[type=submit]{
+        width: 85px;
+        height: 35px;
+        border: 2px solid gray;
+        margin: 20px;
+      }
+      input[type=submit]:hover{
+        background-color: lightgray;
+      }
+      input[type=reset]{
+        width: 85px;
+        height: 35px;
+        border: 2px solid gray;
+      }
+      input[type=reset]:hover{
+        background-color: lightgray;
+      }
+    </style>
+</section>
     </section>
   <?php
 	include 'homepage/Footer.php'

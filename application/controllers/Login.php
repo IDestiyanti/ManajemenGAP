@@ -1,23 +1,56 @@
 <?php
-	defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-	Class Login extends CI_Controller {
-		private $username = "arif";
-		private $password = "12345";
-		public function __constructor(){
-			$this->load->helper('url');
-		}
-		
-		public function postLogin(){
-			$input_data = json_decode($this->input->raw_input_stream, true);
-			$username = $input_data['username'];
-			$password = $input_data['Password'];
-			$success = array(
-				"berhasil" => "true"
+class login extends CI_Controller {
+
+	/**
+	 * Index Page for this controller.
+	 *
+	 * Maps to the following URL
+	 * 		http://example.com/index.php/welcome
+	 *	- or -
+	 * 		http://example.com/index.php/welcome/index
+	 *	- or -
+	 * Since this controller is set as the default controller in
+	 * config/routes.php, it's displayed at http://example.com/
+	 *
+	 * So any other public methods not prefixed with an underscore will
+	 * map to /index.php/welcome/<method_name>
+	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 */
+    function __construct(){
+		parent::__construct();		
+		$this->load->model('m_login');
+ 
+	}                                               
+	public function index(){
+		$this->load->view('login');
+    }
+    function aksi_login(){
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$where = array(
+			'username' => $username,
+			'password' => $password
 			);
-			if($this->username === $username && $this->password === $password){
-				echo json_encode($success);
-			}
+		$cek = $this->m_login->cek_login("tb_login",$where)->num_rows();
+		if($cek > 0){
+ 
+			$data_session = array(
+				'nama' => $username,
+				'status' => "login"
+				);
+ 
+			$this->session->set_userdata($data_session);
+ 
+			redirect(base_url("Welcome"));
+ 
+		}else{
+			echo "Username dan password salah !";
 		}
+    }
+    function logout(){
+		$this->session->sess_destroy();
+		redirect(base_url('login'));
 	}
-?>
+}

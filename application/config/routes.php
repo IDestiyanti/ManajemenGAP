@@ -65,6 +65,7 @@ $route['manual'] = 'manual';
 $route['laporpen'] = 'laporpen';
 $route['bahanbaku'] = 'bahanbaku';
 $route['keranjang'] = 'keranjang';
+$route['login'] = 'login';
 $route['listrik'] = 'listrik';
 $route['rutin'] = 'rutin';
 // $route['posttPengeluaran'] = 'Pengeluaran/postPengeluaran';

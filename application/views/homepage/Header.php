@@ -53,7 +53,8 @@
       </div>
 
       <!--logo start-->
-      <a href="index.php" class="logo">GRIYA <span class="lite">COKLAT NGLANGGERAN</span></a>
+      <a href="index.php" class="logo">TOKO <span class="lite">INTANNIA</span></a>
+      <a href="<?php echo base_url('login/logout'); ?>" style="margin-left:75%" class="logo">Logout</a>
       <!--logo end-->
 
         <!-- notificatoin dropdown end-->
@@ -75,12 +76,12 @@
           <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
-                          <span>Penjualan</span>
+                          <span>Pemasukan</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-              <li><a class="" href="penjualan">Penjualan</a></li>
-              <li><a class="" href="laporpen">Laporan penjualan</a></li>
+              <li><a class="" href="penjualan">Catat Pemasukan</a></li>
+              <li><a class="" href="laporpen">Laporan Pemasukan</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -101,7 +102,6 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="stokbahan">Stok Bahan Baku</a></li>
               <li><a class="" href="stokbarang">Stok Produk</a></li>
              
             </ul>
